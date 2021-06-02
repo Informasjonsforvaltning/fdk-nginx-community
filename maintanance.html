@@ -41,10 +41,26 @@
         }
 
         .container {
-            margin-right: 10%;
-            margin-left: 10%;
+            margin-right: auto;
+            margin-left: auto;
             padding-left: 15px;
             padding-right: 15px;
+        }
+
+        @media (min-width: 768px){
+            .container {
+                max-width: 750px;
+            }
+        }
+        @media (min-width: 992px){
+            .container {
+                max-width: 970px;
+            }
+        }
+        @media (min-width: 1200px){
+            .container {
+                max-width: 1170px;
+            }
         }
 
         .fdk-header {
@@ -97,14 +113,46 @@
             margin-bottom: -60px;
         }
 
-        .fdk-main h1 {
+        .fdk-main-content {
+
+            text-align: center;
+        }
+
+        .fdk-main-content h1 {
             margin: 1.6rem;
             font-size: 3rem;
             font-weight: 800;
         }
 
-        .fdk-main p {
-            font-size: 1.5rem;
+        .fdk-main-content p {
+            font-size: 1.4rem;
+
+        }
+
+        .fdk-main-upper-right-background {
+            position: absolute;
+            top: 40px;
+            right: 0px;
+            height: 300px;
+        }
+
+        @media(max-width: 1000px){
+            .fdk-main-upper-right-background {
+                display: none;
+            }
+        }
+
+        .fdk-main-lower-left-background {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            height: 300px;
+        }
+
+        @media(max-width: 1000px){
+            .fdk-main-lower-left-background {
+                display: none;
+            }
         }
 
         .fdk-links {
@@ -352,8 +400,37 @@
     </div>
 </div>
 <div class="fdk-main">
-    <h1>Vi oppgraderer siden</h1>
-    <p>...men er snart tilbake! Prøv igjen litt senere.</p>
+    <div class="fdk-main-content">
+        <svg width="201" height="200" viewBox="0 0 201 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100.5 196C153.519 196 196.5 153.019 196.5 100C196.5 46.9807 153.519 4 100.5 4C47.4807 4 4.5 46.9807 4.5 100C4.5 153.019 47.4807 196 100.5 196Z" fill="#89A2C4" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M100.5 185.85C147.914 185.85 186.35 147.414 186.35 100C186.35 52.5863 147.914 14.15 100.5 14.15C53.0867 14.15 14.6504 52.5863 14.6504 100C14.6504 147.414 53.0867 185.85 100.5 185.85Z" fill="#D5E1F2" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M62.4404 34.08L67.5104 42.87" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M34.5801 61.94L43.3701 67.01" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M24.3799 100H34.5299" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M34.5801 138.06L43.3701 132.99" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M62.4404 165.92L67.5104 157.13" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M100.5 176.12V165.97" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M138.56 165.92L133.49 157.13" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M166.42 138.06L157.63 132.99" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M166.42 61.94L157.63 67.01" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M138.56 34.08L133.49 42.87" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M100.5 23.88V34.03" stroke="#2D3741" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M176.62 100H166.47" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M163.94 96.62H134.78V103.38H163.94L167.24 100.08L163.94 96.62Z" fill="white" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M134.78 105.92V94.08C134.78 93.1836 134.424 92.3239 133.79 91.69C133.156 91.0561 132.296 90.7 131.4 90.7H128.02L124.63 94.08L121.25 90.7H100.81C98.3343 90.6695 95.9445 91.6066 94.1495 93.312C92.3545 95.0173 91.2962 97.356 91.2 99.83C91.176 101.066 91.399 102.294 91.8557 103.443C92.3125 104.591 92.9939 105.637 93.86 106.519C94.7261 107.401 95.7595 108.101 96.8997 108.579C98.0399 109.056 99.2639 109.302 100.5 109.3H121.25L124.63 105.92L128.02 109.3H131.4C132.296 109.3 133.156 108.944 133.79 108.31C134.424 107.676 134.78 106.816 134.78 105.92Z" fill="#89A2C4" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M117.87 100H100.5" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M103.88 62.26H97.1204V37.31L93.8604 33.35L97.1204 20.39H103.88L107.14 33.35L103.88 37.31V62.26Z" fill="white" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M106.42 62.26H94.5799C94.1352 62.26 93.6949 62.3478 93.2842 62.5183C92.8734 62.6887 92.5004 62.9386 92.1864 63.2535C91.8724 63.5684 91.6236 63.9422 91.4544 64.3535C91.2851 64.7647 91.1986 65.2053 91.1999 65.65V69L94.5799 72.38L91.1999 75.8V99.62C91.1694 102.096 92.1066 104.486 93.8119 106.28C95.5172 108.075 97.8559 109.134 100.33 109.23C101.566 109.254 102.794 109.031 103.943 108.574C105.091 108.118 106.137 107.436 107.019 106.57C107.901 105.704 108.601 104.67 109.079 103.53C109.556 102.39 109.802 101.166 109.8 99.93V75.8L106.42 72.41L109.8 69V65.65C109.801 65.2053 109.715 64.7647 109.546 64.3535C109.376 63.9422 109.127 63.5684 108.814 63.2535C108.5 62.9386 108.126 62.6887 107.716 62.5183C107.305 62.3478 106.865 62.26 106.42 62.26Z" fill="#89A2C4" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M100.5 79.18V99.93" stroke="#2D3741" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path opacity="0.5" d="M26.0703 100C26.0703 80.2599 33.912 61.3284 47.8704 47.37C61.8287 33.4117 80.7603 25.57 100.5 25.57" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+            <path opacity="0.5" d="M164.971 137.22C158.426 148.529 149.03 157.925 137.721 164.47" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <h1>Arbeid pågår</h1>
+        <p>Vi jobber med å forbedre tjenesten. Prøv igjen om kort tid. Vi beklager ulempen.</p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 369 395" class="fdk-main-upper-right-background"><path fill="#d5d7d9" d="M216.77 223.29l49.16-28.38a10.76 10.76 0 1110.76 18.63l-49.16 28.38a10.76 10.76 0 11-10.76-18.63zM307.29 171a10.76 10.76 0 1010.76 18.63L369 160.24V135.4zM302.9 272.92a10.76 10.76 0 0010.76 18.63L369 259.6v-24.84z"></path><path fill="#6c737a" d="M246.27 156.57A10.76 10.76 0 10257 175.21l112-64.65V85.72zM356.4 291.72a10.75 10.75 0 1010.75 18.63l1.85-1.07v-24.84z"></path><path fill="#d5d7d9" d="M325.25 61.29A10.76 10.76 0 00336 79.92l33-19V36zM335.91 204.19a10.75 10.75 0 1010.75 18.63l22.34-12.9v-24.84zM294.54 91.45a10.76 10.76 0 01-3.94 14.69l-61.69 35.62a10.76 10.76 0 11-10.76-18.63l61.69-35.62a10.76 10.76 0 0114.7 3.94z"></path><path fill="#6c737a" d="M196.71 147.93a10.76 10.76 0 01-3.94 14.69l-13.35 7.71a10.75 10.75 0 11-10.75-18.63L182 144a10.77 10.77 0 0114.71 3.93z"></path><path fill="#d5d7d9" d="M336.56 315.59a10.77 10.77 0 01-3.94 14.7l-21.4 12.35A10.76 10.76 0 11300.46 324l21.41-12.35a10.76 10.76 0 0114.69 3.94z"></path><path fill="#6c737a" d="M259.49 0L156.35 59.55a10.75 10.75 0 1010.75 18.63l113.34-65.44A10.75 10.75 0 00285.26 0z"></path><path fill="#d5d7d9" d="M120.08 80.49a10.75 10.75 0 0110.75 18.63L91.22 122a10.76 10.76 0 01-10.76-18.63z"></path><path fill="#6c737a" d="M3.53 0a10.75 10.75 0 0014.4 15.16L44.19 0z"></path><path fill="#d5d7d9" d="M89.35 0a10.75 10.75 0 0014.24 15.39L130.24 0zM173.27 0l-86.7 50.05a10.76 10.76 0 1010.76 18.64l113-65.27A10.68 10.68 0 00214 0zM301.67 373a10.76 10.76 0 1010.76 18.63L369 359v-24.87zM246.06 57.33A10.76 10.76 0 11256.82 76l-103.48 59.71a10.76 10.76 0 01-10.76-18.63z"></path><path fill="#6c737a" d="M345.37 0l-55.3 31.93a10.75 10.75 0 1010.75 18.63L369 11.2V0z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 218" class="fdk-main-lower-left-background"><path fill="#d5d7d9" d="M156.14 171.21L107 199.6A10.76 10.76 0 0196.22 181l49.17-28.39a10.75 10.75 0 0110.75 18.63z"></path><path fill="#6c737a" d="M78.53 203.55a10.75 10.75 0 00-14.69-3.94L32 218h43a10.75 10.75 0 003.53-14.45z"></path><path fill="#d5d7d9" d="M74 106.88A10.76 10.76 0 0059.25 103L0 137.16V162l70-40.42a10.77 10.77 0 004-14.7z"></path><path fill="#6c737a" d="M161.75 205.42a10.75 10.75 0 00-14.69-3.94L118.45 218h42a10.74 10.74 0 001.3-12.58zM20.46 88.09a10.76 10.76 0 00-14.7-3.94L0 87.48v24.84l16.52-9.54a10.76 10.76 0 003.94-14.69z"></path><path fill="#d5d7d9" d="M40.94 175.62a10.76 10.76 0 00-14.69-3.94L0 186.84v24.84l37-21.37a10.75 10.75 0 003.94-14.69zM36.35 78.91a10.76 10.76 0 013.94-14.69L61.7 51.86a10.75 10.75 0 1110.75 18.63l-21.4 12.36a10.77 10.77 0 01-14.7-3.94zM75.18 6.81a10.76 10.76 0 00-14.69-3.94L0 37.8v24.83L71.24 21.5a10.75 10.75 0 003.94-14.69z"></path></svg>
 </div>
 <div class="fdk-footer">
     <div class="footer-content container">
