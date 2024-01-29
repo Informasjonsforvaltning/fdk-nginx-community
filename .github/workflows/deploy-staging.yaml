@@ -5,7 +5,8 @@ on:
     types: [ready_for_review, opened, reopened, synchronize]
     branches:
       - main
-
+  workflow_dispatch:
+  
 jobs:
   build-and-deploy-staging:
     name: Call reusable workflow when pull request is created
