@@ -6,7 +6,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY nginx-prod.conf /etc/nginx/nginx.conf
 
 COPY favicon.ico /var/www/http-error/favicon.ico
-COPY maintanance-prod.html /var/www/http-error/maintanance.html
+COPY maintenance-prod.html /var/www/http-error/maintenance.html
 
 EXPOSE 8080
-
